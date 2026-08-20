@@ -1050,3 +1050,33 @@ a {
         0 0 6px white,
         0 0 12px white;
 }
+
+@media (max-width: 375px) {
+    .ubicacionBoton {
+        top: 190px;
+    }
+
+    .dressBoton {
+        padding: 10px 40px;
+        bottom: 30px;
+    }
+
+    .dressEstrellaIzq {
+        left: 65px;
+        bottom: 16px;
+    }
+
+    .dressEstrellaDer {
+        left: 245px;
+        bottom: 110px;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .dressEstrellaDer {
+        left: 285px;
+    }
+
+}
