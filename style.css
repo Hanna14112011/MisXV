@@ -1,0 +1,1052 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #CCCACB;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background-color: #CCCACB;
+}
+
+@keyframes brilloFondo {
+
+    0% {
+        background-image:
+            radial-gradient(circle at 50% 15%,
+                rgba(255, 255, 255, 0.20) 0,
+                rgba(255, 255, 255, 0) 220px),
+            radial-gradient(circle at 50% 45%,
+                rgba(255, 255, 255, 0.10) 0,
+                rgba(255, 255, 255, 0) 250px),
+            radial-gradient(circle at 50% 75%,
+                rgba(255, 255, 255, 0.12) 0,
+                rgba(255, 255, 255, 0) 230px);
+    }
+
+    25% {
+        background-image:
+            radial-gradient(circle at 50% 15%,
+                rgba(255, 255, 255, 0.55) 0,
+                rgba(255, 255, 255, 0) 220px),
+            radial-gradient(circle at 50% 45%,
+                rgba(255, 255, 255, 0.18) 0,
+                rgba(255, 255, 255, 0) 250px),
+            radial-gradient(circle at 50% 75%,
+                rgba(255, 255, 255, 0.20) 0,
+                rgba(255, 255, 255, 0) 230px);
+    }
+
+    50% {
+        background-image:
+            radial-gradient(circle at 50% 15%,
+                rgba(255, 255, 255, 0.15) 0,
+                rgba(255, 255, 255, 0) 220px),
+            radial-gradient(circle at 50% 45%,
+                rgba(255, 255, 255, 0.45) 0,
+                rgba(255, 255, 255, 0) 250px),
+            radial-gradient(circle at 50% 75%,
+                rgba(255, 255, 255, 0.12) 0,
+                rgba(255, 255, 255, 0) 230px);
+    }
+
+    75% {
+        background-image:
+            radial-gradient(circle at 50% 15%,
+                rgba(255, 255, 255, 0.35) 0,
+                rgba(255, 255, 255, 0) 220px),
+            radial-gradient(circle at 50% 45%,
+                rgba(255, 255, 255, 0.12) 0,
+                rgba(255, 255, 255, 0) 250px),
+            radial-gradient(circle at 50% 75%,
+                rgba(255, 255, 255, 0.40) 0,
+                rgba(255, 255, 255, 0) 230px);
+    }
+
+    100% {
+        background-image:
+            radial-gradient(circle at 50% 15%,
+                rgba(255, 255, 255, 0.20) 0,
+                rgba(255, 255, 255, 0) 220px),
+            radial-gradient(circle at 50% 45%,
+                rgba(255, 255, 255, 0.10) 0,
+                rgba(255, 255, 255, 0) 250px),
+            radial-gradient(circle at 50% 75%,
+                rgba(255, 255, 255, 0.12) 0,
+                rgba(255, 255, 255, 0) 230px);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+/* =========================================================
+   FUENTES
+========================================================= */
+
+@font-face {
+    font-family: "Chocolate Milky";
+    src: url("fonts/Chocolate Milky Free Personal.otf") format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Josefin Slab";
+    src: url("fonts/JosefinSlab-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Josefin Slab";
+    src: url("fonts/JosefinSlab-Medium.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Josefin Slab";
+    src: url("fonts/JosefinSlab-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Marvelous Photograph";
+    src: url("fonts/Marvelous Photograph Serif.otf") format("opentype");
+    font-weight: normal;
+}
+
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL DE SECCIONES
+========================================================= */
+
+/*
+   Máximo: 400px
+
+   En celulares:
+   20px de margen a cada lado.
+
+   Ejemplo:
+   pantalla 390px → sección 350px
+   pantalla 360px → sección 320px
+*/
+
+.seccion {
+    width: min(400px, calc(100% - 40px));
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   PORTADA
+========================================================= */
+
+.portada {
+    position: relative;
+
+    width: 100%;
+    height: 600px;
+
+    overflow: hidden;
+}
+
+.portadaDecoracion {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+
+/* -------------------------
+   Decorado superior
+------------------------- */
+
+.decorado-superior {
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    top: 0;
+    left: 0;
+
+    transform: scaleX(-1);
+}
+
+
+/* =========================================================
+   DECORACIONES DERECHA
+========================================================= */
+
+.decoradoDerecha {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Serpentina derecha */
+
+.serpentina-derecha {
+    position: absolute;
+
+    width: 200px;
+    height: 80px;
+
+    right: -70px;
+    top: 180px;
+
+    transform: rotate(90deg);
+}
+
+
+/* Bola disco derecha */
+
+.bola-disco-derecha {
+    position: absolute;
+
+    width: 200px;
+
+    right: -70px;
+    top: -50px;
+}
+
+
+/* =========================================================
+   TÍTULO PORTADA
+========================================================= */
+
+.portadaTitulo {
+    position: absolute;
+
+    width: 400px;
+    max-width: 100%;
+
+    height: 400px;
+
+    left: 50%;
+    top: 90px;
+
+    transform: translateX(-50%);
+}
+
+
+/* MIS */
+
+.portadaTituloH2 {
+    position: absolute;
+    color: #a10c0c;
+    left: 90px;
+    top: 0;
+
+    font-family: "Chocolate Milky", cursive;
+    font-size: 70px;
+
+    filter: drop-shadow(0 10px 7px rgba(0, 0, 0, 0.4));
+}
+
+
+/* XV */
+
+.portadaTituloH1 h1 {
+    position: absolute;
+
+    left: 170px;
+    top: -20px;
+
+    margin: 0;
+
+    font-family: "Marvelous Photograph";
+    font-size: 300px;
+    font-weight: normal;
+
+    color: #7F756A;
+
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.4));
+}
+
+
+/* Hanna */
+
+.portadaTituloH3 img {
+    position: absolute;
+
+    width: auto;
+    height: 50px;
+
+    left: 50%;
+    top: 280px;
+
+    transform: translateX(-50%);
+}
+
+
+/* Copas */
+
+.portadaTituloCopa img {
+    position: absolute;
+
+    width: auto;
+    height: 100px;
+
+    left: 50%;
+    top: 330px;
+
+    transform: translateX(-50%);
+}
+
+
+/* =========================================================
+   DECORACIONES IZQUIERDA
+========================================================= */
+
+.decoradoIzquierda {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Serpentina */
+
+.serpentina-izquierda {
+    position: absolute;
+
+    width: 200px;
+    height: 80px;
+
+    left: -70px;
+    bottom: -50px;
+
+    transform: rotate(90deg);
+
+    z-index: 1;
+}
+
+
+/* Bola disco */
+
+.bola-disco-izquierda {
+    position: absolute;
+
+    height: 130px;
+    width: auto;
+
+    left: -40px;
+    bottom: 80px;
+}
+
+
+/* =========================================================
+   ESTRELLAS PORTADA
+========================================================= */
+
+.conjuntoEstrellas {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+}
+
+
+/* Grupo */
+
+.estrellas-grupo {
+    position: absolute;
+
+    height: 50px;
+    width: auto;
+
+    right: 20px;
+    bottom: 220px;
+}
+
+
+/* Estrella grande */
+
+.estrella-grande {
+    position: absolute;
+
+    height: 50px;
+    width: auto;
+
+    left: 100px;
+    top: 220px;
+
+    transform: rotateZ(35deg);
+}
+
+
+/* Estrella pequeña */
+
+.estrella-pequena {
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    left: 40px;
+    top: 200px;
+
+    transform:
+        rotateZ(-35deg) scaleY(-1);
+}
+
+
+/* =========================================================
+   UBICACIÓN
+========================================================= */
+
+.ubicacion {
+    position: relative;
+
+    margin-top: 0;
+    margin-bottom: 97px;
+}
+
+
+/* Imagen principal */
+
+.ubicacion>.imagen-seccion {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* Botón */
+
+.ubicacionBoton {
+    position: absolute;
+
+    top: 225px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    filter: drop-shadow(0 10px 7px rgba(0, 0, 0, 0.4));
+}
+
+.ubicacionBoton h2 {
+    padding: 10px;
+
+    border: 2px solid #a10c0c;
+
+    text-align: center;
+    color: #a10c0c;
+
+    font-family: "Josefin Slab", serif;
+    font-weight: 700;
+}
+
+
+/* Decorado */
+
+.ubicacionDecorado {
+    position: absolute;
+
+    top: 10px;
+    right: 0;
+}
+
+.ubicacionDecorado img {
+    width: 150px;
+    height: 150px;
+}
+
+
+/* Trago */
+
+.ubicacionTrago {
+    position: absolute;
+
+    right: -20px;
+    bottom: -60px;
+}
+
+.ubicacionTrago img {
+    width: 70px;
+    height: 120px;
+}
+
+
+/* =========================================================
+   CONTADOR
+========================================================= */
+
+.contador-container {
+    position: relative;
+
+    margin-top: 107px;
+
+    text-align: center;
+}
+
+
+/* Beso */
+
+.beso-contador {
+    position: absolute;
+
+    width: 50px;
+    height: auto;
+
+    top: -16px;
+    left: 55px;
+
+    transform: rotate(-15deg);
+}
+
+
+/* Fila */
+
+.contador {
+    display: flex;
+
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* Cada unidad */
+
+.unidad {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* Número */
+
+.numero {
+    width: 62px;
+    height: 70px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: transparent;
+
+    border: 2px solid transparent;
+
+    border-image:
+        url("img/fondo_texto.png") 20 stretch;
+
+    font-family: "Josefin Slab", serif;
+
+    font-weight: 700;
+
+    font-size: 45px;
+
+    color: #111;
+}
+
+
+/* Separador */
+
+.separador {
+    font-size: 40px;
+
+    font-family: serif;
+
+    margin-top: -15px;
+}
+
+
+/* Texto pequeño */
+
+.unidad span {
+    margin-top: 5px;
+
+    font-family: "Josefin Slab", serif;
+
+    font-size: 14px;
+}
+
+
+/* Fecha */
+
+.fecha {
+    margin-top: 25px;
+
+    font-family: "Josefin Slab", serif;
+
+    font-size: 28px;
+
+    line-height: 1.4;
+
+    color: #111;
+}
+
+
+/* =========================================================
+   DRESS CODE
+========================================================= */
+
+.dress {
+    position: relative;
+
+    margin-top: 97px;
+}
+
+
+/* Imagen */
+
+.dress>.imagen-seccion {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* Botón */
+
+.dressBoton {
+    position: absolute;
+
+    bottom: 40px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 10px 30px;
+
+    border: 2px solid #a10c0c;
+
+    text-align: center;
+
+    font-family: "Josefin Slab", serif;
+
+    font-size: 16px;
+
+    filter: drop-shadow(0 10px 7px rgba(0, 0, 0, 0.4));
+}
+
+.dressBoton h2 {
+    margin: 0;
+    color: #a10c0c;
+
+    font-weight: 700;
+}
+
+
+/* Estrellas */
+
+.dressEstrellas {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+}
+
+.dressEstrellaIzq {
+    position: absolute;
+
+    bottom: 25px;
+    left: 87px;
+}
+
+.dressEstrellaDer {
+    position: absolute;
+
+    bottom: 95px;
+    left: 275px;
+}
+
+.dressEstrellas img {
+    width: 25px;
+    height: 25px;
+}
+
+
+/* =========================================================
+   FOTOS
+========================================================= */
+
+.fotos {
+    position: relative;
+
+    margin-top: 97px;
+}
+
+
+/* Fondo */
+
+.fotosFondo img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* Texto */
+
+.fotosTexto {
+    position: absolute;
+
+    width: 250px;
+
+    top: 210px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    font-family: "Josefin Slab", serif;
+
+    font-size: 16px;
+
+    font-weight: 400;
+}
+
+.fotosTexto h2 {
+    font-weight: 400;
+}
+
+
+/* Divisores */
+
+.divisores {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+}
+
+.divisor {
+    position: absolute;
+
+    width: 100%;
+    height: 80px;
+
+    z-index: -1;
+}
+
+.divisor-superior {
+    top: 70px;
+}
+
+.divisor-inferior {
+    bottom: -60px;
+    margin-bottom: -20px;
+}
+
+
+/* =========================================================
+   POLAROIDS
+========================================================= */
+
+.polaroid {
+    position: relative;
+
+    margin-top: 97px;
+}
+
+
+/* Moño */
+
+.polaroidMono {
+    position: absolute;
+
+    left: 49%;
+    top: -12px;
+
+    transform: translateX(-50%);
+}
+
+.polaroidMono img {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* Fotos */
+
+.polaroidFotos img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   REGALO
+========================================================= */
+
+.regalo {
+    margin-top: 97px;
+}
+
+.regalo>.imagen-seccion {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .portadaTitulo {
+        transform: translateX(-50%) scale(calc((100vw - 40px) / 400));
+
+        transform-origin: top center;
+    }
+
+    .contador {
+        gap: 5px;
+    }
+
+    .numero {
+        width: 58px;
+        height: 68px;
+
+        font-size: 42px;
+    }
+
+    .separador {
+        font-size: 36px;
+    }
+
+    .fecha {
+        font-size: 26px;
+    }
+
+}
+
+.portada,
+.ubicacion,
+.contador-container,
+.dress,
+.fotos,
+.polaroid,
+.regalo {
+    position: relative;
+    z-index: 1;
+}
+
+.destellos {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+/* Cada destello */
+.destellos span {
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 5px rgba(255, 255, 255, 0.9),
+        0 0 12px rgba(255, 255, 255, 0.8),
+        0 0 25px rgba(255, 255, 255, 0.5);
+
+    opacity: 0;
+
+    animation: destello 4s infinite ease-in-out;
+}
+
+
+/* Posiciones */
+
+.destellos span:nth-child(1) {
+    left: 18%;
+    top: 12%;
+    animation-delay: 0s;
+}
+
+.destellos span:nth-child(2) {
+    left: 78%;
+    top: 18%;
+    animation-delay: 1.2s;
+}
+
+.destellos span:nth-child(3) {
+    left: 35%;
+    top: 28%;
+    animation-delay: 2.4s;
+}
+
+.destellos span:nth-child(4) {
+    left: 85%;
+    top: 38%;
+    animation-delay: 0.7s;
+}
+
+.destellos span:nth-child(5) {
+    left: 15%;
+    top: 45%;
+    animation-delay: 3s;
+}
+
+.destellos span:nth-child(6) {
+    left: 62%;
+    top: 50%;
+    animation-delay: 1.8s;
+}
+
+.destellos span:nth-child(7) {
+    left: 30%;
+    top: 60%;
+    animation-delay: 0.4s;
+}
+
+.destellos span:nth-child(8) {
+    left: 82%;
+    top: 68%;
+    animation-delay: 2.8s;
+}
+
+.destellos span:nth-child(9) {
+    left: 12%;
+    top: 75%;
+    animation-delay: 1.5s;
+}
+
+.destellos span:nth-child(10) {
+    left: 52%;
+    top: 78%;
+    animation-delay: 3.5s;
+}
+
+.destellos span:nth-child(11) {
+    left: 75%;
+    top: 88%;
+    animation-delay: 0.9s;
+}
+
+.destellos span:nth-child(12) {
+    left: 38%;
+    top: 92%;
+    animation-delay: 2s;
+}
+
+
+/* Animación */
+
+@keyframes destello {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    35% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+
+    52% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+
+    60% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+}
+
+.destellos span::before,
+.destellos span::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    background: white;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+}
+
+.destellos span::before {
+    width: 2px;
+    height: 28px;
+
+    box-shadow:
+        0 0 6px white,
+        0 0 12px white;
+}
+
+.destellos span::after {
+    width: 28px;
+    height: 2px;
+
+    box-shadow:
+        0 0 6px white,
+        0 0 12px white;
+}
